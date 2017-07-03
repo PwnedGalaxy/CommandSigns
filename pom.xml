@@ -27,19 +27,19 @@
       </repository>
    </repositories>
    <dependencies>
-         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.8-R0.1-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
-         <dependency>
-            <groupId>net.milkbowl.vault</groupId>
-            <artifactId>Vault</artifactId>
-            <version>1.4.2</version>
-            <type>jar</type>
-            <scope>compile</scope>
-         </dependency>
+	   <dependency>
+	      <groupId>org.bukkit</groupId>
+	      <artifactId>bukkit</artifactId>
+	      <version>1.12-R0.1-SNAPSHOT</version>
+	      <scope>compile</scope>
+	      <type>jar</type>
+	   </dependency>
+	   <dependency>
+	      <groupId>net.milkbowl.vault</groupId>
+	      <artifactId>VaultAPI</artifactId>
+	      <version>1.6</version>
+	      <scope>compile</scope>
+	      <type>jar</type>
+	   </dependency>
    </dependencies>
 </project>

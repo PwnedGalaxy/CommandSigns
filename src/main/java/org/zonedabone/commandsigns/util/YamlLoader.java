@@ -2,12 +2,15 @@ package org.zonedabone.commandsigns.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Set;
 
 import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.google.common.base.Charsets;
 
 public class YamlLoader {
     
@@ -23,7 +26,7 @@ public class YamlLoader {
         File f = new File(plugin.getDataFolder(), filename);
         
         // Load the included file
-        FileConfiguration internal = YamlConfiguration.loadConfiguration(plugin.getResource(filename));
+        FileConfiguration internal = YamlConfiguration.loadConfiguration(new InputStreamReader(plugin.getResource(filename), Charsets.UTF_8));
         
         // Write the included file if an external one doesn't exist
         if (!f.exists()) {
